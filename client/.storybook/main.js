@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
+    '@storybook/addon-actions',
     {
       name: '@storybook/addon-postcss',
       options: {
@@ -27,6 +28,7 @@ module.exports = {
       ...config.resolve.alias,
 
       '@components': path.resolve(__dirname, '../src/components'),
+      '@hoc': path.resolve(__dirname, '../src/hoc'),
       '@pages': path.resolve(__dirname, '../src/pages'),
     };
 
