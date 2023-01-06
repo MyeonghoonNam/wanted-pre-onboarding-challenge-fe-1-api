@@ -3,6 +3,7 @@ import { AuthModal } from './components';
 
 const withAuth = (Component: ComponentType) => () => {
   const [isAuth, setIsAuth] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -10,7 +11,11 @@ const withAuth = (Component: ComponentType) => () => {
     if (token) {
       setIsAuth(true);
     }
+
+    setMounted(true);
   }, []);
+
+  if (!mounted) return null;
 
   return isAuth ? <Component /> : <AuthModal />;
 };
