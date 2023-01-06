@@ -8,6 +8,11 @@ import {
 
 type ResponseData = any;
 
+export interface ApiError {
+  status: number;
+  message: string;
+}
+
 export interface Instance extends AxiosInstance {
   interceptors: {
     request: AxiosInterceptorManager<AxiosRequestConfig>;
