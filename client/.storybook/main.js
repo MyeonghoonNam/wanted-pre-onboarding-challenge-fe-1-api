@@ -27,8 +27,11 @@ module.exports = {
     config.resolve.alias = {
       ...config.resolve.alias,
 
+      '@api': path.resolve(__dirname, '../src/api'),
       '@components': path.resolve(__dirname, '../src/components'),
       '@hoc': path.resolve(__dirname, '../src/hoc'),
+      '@hooks': path.resolve(__dirname, '../src/hooks'),
+      '@mutations': path.resolve(__dirname, '../src/mutations'),
       '@pages': path.resolve(__dirname, '../src/pages'),
     };
 
