@@ -1,3 +1,4 @@
+import { withNoneAuth } from '@hoc/index';
 import { Container, LoginForm } from './components';
 
 const LoginPage = () => {
@@ -8,4 +9,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default withNoneAuth(LoginPage);
