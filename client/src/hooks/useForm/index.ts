@@ -35,10 +35,10 @@ const useForm = <T extends object>({
       ).length;
       const isValid = propertyLen === validPropertyLen;
 
-      if (isValid) await onSubmit();
-
       setHasFormError(!isValid);
       setErrors(newErrors);
+
+      if (isValid) await onSubmit();
     },
     [values, validate, onSubmit, propertyLen],
   );
